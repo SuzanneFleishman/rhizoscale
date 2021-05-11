@@ -10,9 +10,9 @@ A publication that these codes were developed for is under review. If you use an
 All RCodes in this project are based on Phyloseq objects with ASVs for bacteria (16s) and fungi (ITS). There are 5 separate codes:
 
 1PhyloseqObjectCreation
-- 1)creates MEMs based on the coordinates used in this study for later use
-- 2) converts categorical variables to dummy variables,
-- 3) takes initial 16s and ITS phyloseq objects creates 11 separate Phyloseq objects that vary in either filtration parameters or taxonomic level
+- creates MEMs based on the coordinates used in this study for later use
+- converts categorical variables to dummy variables,
+- takes initial 16s and ITS phyloseq objects creates 11 separate Phyloseq objects that vary in either filtration parameters or taxonomic level
 
 
 2VariationPartitioningAnalysis
