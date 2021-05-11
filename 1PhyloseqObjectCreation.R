@@ -1,16 +1,16 @@
-#Spatial window data analysis initiated 11/10/19
-#following prior data exploration, hopefully final tests and visualization
 
-#prior analyses in scripts: DADA2_Pipeline_spatialwindow.R; SpatialAnalysis.R;RDAPhylum.R
-#All saved in "spatial window" folder
+#this script preps spatial data and phyloseq objects for downstream analyses by computing MEMs, filtering phyloseq objects, and merging based on taxonomy
 
-#Beginning here, located in "spatialDownstream"
+#project repository: https://github.com/SuzanneFleishman/rhizoscale
+#publication code created for: (under review, will be updated)
 
-#this script preps spatial data and phyloseq objects for downstream analyses
+#Code compiled by Suzanne Fleishman; this version saved May 11, 2021
+
+#inputs required: 1) 16s and/or ITS phyloseq objects, 2) metadata csv that includes at a minimum, x and y coordinates
 
 #### Setup and Data Import ####
 
-setwd("/Users/suzannefleishman/Google\ Drive/PSU/Rcodes/spatialDownstream/outputs")
+setwd("PATH")
 
 ### Clear workspace ###
 rm(list=ls())
@@ -34,13 +34,13 @@ ipak(packages)
 #These initial ITS and 16s phyloseq (PS) objects include only metadata as Sample IDs
 
 #load ITS object called "ps.its.ALL"
-load("/Users/suzannefleishman/Google\ Drive/PSU/Rcodes/spatialDownstream/DADA2/ITS/ITSspatialPSobj3.2.21.Rdata")
+load("xxx.Rdata")
 
 #load 16s object called "ps.16s.bac"
-load("/Users/suzannefleishman/Google Drive/PSU/Rcodes/spatialDownstream/DADA2/16s/PSobj16sBacOnly.Rdata")
+load("xxx.Rdata")
 
 #load metadata file with coordinates, root trait information, and cluster assignments that map to the Sample IDs
-meta<-as.data.frame(read.csv("/Users/suzannefleishman/Google\ Drive/PSU/Rcodes/spatialDownstream/DADA2/metaUpdate3.2.21.csv")) 
+meta<-as.data.frame(read.csv("xxx.csv")) 
 
 ####ensure proper metadata for both 16s and its####
 
